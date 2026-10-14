@@ -6,3 +6,29 @@
 @media(max-width:360px){.hero h1{font-size:40px}.solution{gap:14px;padding:16px}.solution h3{font-size:19px}.solution img{min-width:72px}.product{grid-template-columns:92px minmax(0,1fr);gap:20px}.phone{font-size:25px}.contact-heading h1{font-size:32px}.stage-controls button{font-size:14px;padding-inline:12px}.brand{font-size:16px}.nav-wrap{gap:8px}.nav-contact{padding-inline:9px}.menu-toggle{padding:6px;font-size:14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 @media(prefers-reduced-motion:no-preference){.hero-media{animation:arrive .7s var(--ease) both}@keyframes arrive{from{transform:translateY(12px)}to{transform:translateY(0)}}}
+
+
+/* Contact card v2: scoped to the approved consultation card. */
+.contact-panel.card-v2{--contact-soft:#e9e9ed;text-align:center;padding:32px 32px 26px}
+.card-v2>p{margin-top:12px}
+.card-v2 .wechat-qr{width:min(294px,100%);margin:24px auto 16px;border:1px solid var(--line);border-radius:20px;overflow:clip;background:var(--paper)}
+.card-v2 .wechat-qr img{width:100%;height:auto}
+.card-v2 .qr-instruction{font-size:16px;margin-top:0}
+.card-v2 .wechat-account{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:12px;min-width:0}
+.card-v2 .wechat{font-size:18px;color:var(--ink);margin:0;white-space:nowrap;overflow-wrap:normal}
+.card-v2 .copy-button{background:var(--contact-soft);color:var(--accent);border:0;border-radius:999px;padding:8px 20px;min-width:72px;min-height:44px;font-size:14px;white-space:nowrap}
+.card-v2 .copy-button:hover{background:var(--line)}
+.card-v2 .copy-button:disabled{opacity:.7;cursor:wait}
+.card-v2 .copy-status{font-size:14px;min-height:0;margin:12px 0 0}
+.card-v2 .copy-status:empty{display:none}
+.card-v2 .phone-row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px;margin-top:28px;text-align:left}
+.card-v2 .phone-details{display:flex;gap:12px;align-items:center}
+.card-v2 .phone-details>span{font-size:14px;color:var(--muted)}
+.card-v2 .phone{font-size:20px;margin:0;line-height:1.5;font-weight:500;min-height:44px;display:flex;align-items:center}
+.card-v2 .phone-button{border-radius:999px;min-height:44px;padding:10px 24px;font-size:16px}
+@media(max-width:960px){.contact-panel.card-v2{padding-inline:24px}}
+@media(max-width:700px){.contact-panel.card-v2{padding:28px 24px 24px}.card-v2 .phone-row{justify-content:center;gap:12px}.card-v2 .wechat-account{gap:12px}.card-v2 .wechat{font-size:17px}.card-v2 .copy-button{padding-inline:16px;min-width:64px}}
+@media(max-width:360px){.contact-panel.card-v2{padding-inline:20px}.card-v2 .wechat{font-size:16px}.card-v2 .wechat-account{gap:10px}.card-v2 .copy-button{padding-inline:14px;min-width:60px}}
+.card-v2 .copy-button{font-size:0}
+.card-v2 .copy-button::after{content:"复制";font-size:14px}
+.card-v2 .copy-button:disabled::after{content:"复制中"}
