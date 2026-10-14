@@ -111,6 +111,7 @@
     const zoomed=$('#fp-zoom').getAttribute('aria-pressed')!=='true';
     $('#fp-zoom').setAttribute('aria-pressed',String(zoomed));$('#fp-zoom').textContent=zoomed?'还原户型':'放大户型';
     $('#fp-map-viewport').classList.toggle('is-zoomed',zoomed);
+    if(!zoomed){$('#fp-map-viewport').scrollLeft=0;$('#fp-map-viewport').scrollTop=0;}
     $('#fp-zoom-hint').textContent=zoomed?'已放大，可在图内左右、上下滑动查看。':'灯光仅显示在对应房间内。';
   });
   const mobileLayout = window.matchMedia('(max-width:700px)');
@@ -119,3 +120,4 @@
   $('.fp-controls').hidden=false;$('.fp-scene-bar').hidden=false;$('#fp-zoom').hidden=false;
   applyScene('home');
 })();
+
